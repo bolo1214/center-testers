@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#03040A">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Fuiste invitado a probar la nueva app de Complejo Center antes de su lanzamiento. Convocatoria limitada a 100 testers en Android.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="Complejo Center">
+  <meta property="og:title" content="Fuiste invitado · Center">
+  <meta property="og:description" content="Probá Center antes de su lanzamiento. Acceso anticipado para 100 testers en Android.">
+  <meta property="og:url" content="https://center-testers.vercel.app/">
+  <meta property="og:image" content="https://center-testers.vercel.app/assets/center-logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Fuiste invitado | Complejo Center</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <style>:root{
+  --bg:#03040a;--bg2:#070817;--panel:#090b16;--panel2:#0d0f22;--ink:#f8f8fc;--muted:#9ea5ba;--line:rgba(255,255,255,.11);
+  --pink:#ff2db2;--pink2:#ec22d3;--violet:#7b2cff;--blue:#2684ff;--cyan:#36b9ff;--radius:18px;--shell:1280px;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--bg)}body{margin:0;background:radial-gradient(circle at 72% 18%,rgba(37,87,255,.09),transparent 34%),radial-gradient(circle at 55% 62%,rgba(255,45,178,.045),transparent 28%),var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}.svg-defs{position:absolute;width:0;height:0}.shell{width:min(var(--shell),calc(100% - 56px));margin-inline:auto}.skip-link{position:fixed;left:12px;top:-70px;z-index:100;background:#fff;color:#000;padding:10px 14px;border-radius:10px}.skip-link:focus{top:12px}svg{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}a{color:inherit;text-decoration:none}button{font:inherit}
+.site-header{position:relative;z-index:20;border-bottom:1px solid var(--line);background:rgba(3,4,10,.85);backdrop-filter:blur(14px)}.header-grid{height:72px;display:grid;grid-template-columns:220px 1fr auto;align-items:center;gap:28px}.brand{width:176px;display:block}.brand img{width:100%;height:auto;display:block}.top-nav{display:flex;justify-content:center;gap:42px;font-size:12px;color:#d8d7df}.top-nav a{transition:.2s}.top-nav a:hover{color:#fff}.header-actions{display:flex;align-items:center;gap:20px}.android-tag{display:flex;align-items:center;gap:8px;font-size:12px;color:#d9dbe6}.android-tag svg{width:17px;height:17px}.access-chip{display:flex;align-items:center;gap:10px;border:1px solid rgba(255,45,178,.6);border-radius:8px;padding:11px 15px;font-size:10px;font-weight:800;letter-spacing:.06em;color:#ff67ca;background:linear-gradient(180deg,rgba(255,45,178,.05),rgba(255,45,178,.015))}.access-chip span{width:5px;height:5px;border-radius:50%;background:var(--pink);box-shadow:0 0 12px var(--pink)}.access-chip svg{width:15px;height:15px}
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(123deg,transparent 0 42%,rgba(123,44,255,.06) 42.2% 42.4%,transparent 42.6% 60%,rgba(38,132,255,.08) 60.2% 60.35%,transparent 60.55%);pointer-events:none}.hero-glow{position:absolute;border-radius:50%;filter:blur(90px);opacity:.42;pointer-events:none}.hero-glow-blue{width:420px;height:420px;background:#0c5cff;right:15%;top:6%}.hero-glow-pink{width:360px;height:360px;background:#c90086;right:-4%;top:33%;opacity:.26}.hero-grid{min-height:530px;display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:20px}.hero-copy{position:relative;z-index:4;padding:56px 0 60px}.kicker,.section-kicker{margin:0;color:#c6c8d6;font-size:10px;font-weight:800;letter-spacing:.28em;text-transform:uppercase}.kicker{display:flex;align-items:center;gap:14px}.kicker span{width:19px;height:3px;background:var(--pink);box-shadow:0 0 12px rgba(255,45,178,.55)}h1{margin:18px 0 10px;font-family:Impact,Haettenschweiler,"Arial Narrow Bold",sans-serif;font-style:italic;font-weight:900;font-size:clamp(64px,6.4vw,96px);line-height:.82;letter-spacing:.01em;text-transform:uppercase}h1 span,h1 strong{display:block}h1 strong{color:var(--pink);font-weight:900}.hero-lead{margin:0 0 4px;font-size:20px;font-weight:650}.hero-text{max-width:570px;margin:0;color:#d9d9e4;font-size:18px;line-height:1.45}.hero-text b{color:#fff}.hero-ctas{display:flex;align-items:center;gap:32px;margin-top:28px}.btn{min-height:50px;border-radius:8px;padding:0 22px;display:inline-flex;align-items:center;justify-content:space-between;gap:34px;font-size:12px;font-weight:900;letter-spacing:.025em}.btn svg{width:18px;height:18px}.btn-primary{background:linear-gradient(90deg,#ff20b4,#ff34bd);color:#050509;box-shadow:0 0 30px rgba(255,45,178,.22);transition:transform .18s,box-shadow .18s}.btn-primary:hover{transform:translateY(-1px);box-shadow:0 0 42px rgba(255,45,178,.32)}.hero-ctas .btn-primary{width:318px}.btn-link{display:flex;align-items:center;gap:11px;color:#f5f5fa}.play-circle{width:43px;height:43px;border:1px solid rgba(255,255,255,.78);border-radius:50%;display:grid;place-items:center}.play-circle svg{width:14px;height:14px;fill:#fff;stroke:none;margin-left:2px}.btn-link b{font-size:13px}.btn-link small{display:block;color:#9298aa;margin-top:2px;font-size:10px}.hero-facts{display:flex;gap:26px;margin-top:30px}.hero-facts>div{display:flex;align-items:center;gap:10px;padding-right:25px;border-right:1px solid var(--line)}.hero-facts>div:last-child{border-right:0}.fact-icon{width:38px;height:38px;border:1px solid currentColor;border-radius:50%;display:grid;place-items:center}.fact-icon svg{width:17px;height:17px}.pink{color:var(--pink)}.blue{color:var(--blue)}.violet{color:#a06cff}.hero-facts p{margin:0;color:#aab0c0;font-size:9px;line-height:1.35}.hero-facts b{color:#f6f6fb;font-size:10px}
+.hero-visual{position:relative;align-self:stretch;min-height:530px}.beam{position:absolute;height:2px;border-radius:999px;transform-origin:left center;filter:drop-shadow(0 0 8px currentColor)}.beam-blue{width:510px;background:linear-gradient(90deg,transparent,var(--blue),transparent);color:var(--blue);left:14%;top:20%;transform:rotate(-37deg)}.beam-pink{width:420px;background:linear-gradient(90deg,transparent,var(--pink),transparent);color:var(--pink);left:31%;top:42%;transform:rotate(-24deg)}.phone{position:absolute;width:252px;height:500px;border-radius:37px;padding:8px;background:linear-gradient(145deg,#4952a7,#090d18 25%,#111428 65%,#e132be);box-shadow:0 34px 70px #000b,0 0 44px rgba(38,132,255,.15);overflow:hidden}.phone:after{content:"";position:absolute;inset:0;border-radius:37px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.2);pointer-events:none}.phone-main{left:15%;top:28px;z-index:3;transform:rotate(2deg)}.phone-back{right:5%;top:72px;z-index:1;transform:rotate(7deg);opacity:.92}.phone-notch{position:absolute;z-index:4;top:11px;left:50%;transform:translateX(-50%);width:92px;height:24px;border-radius:16px;background:#010205}.screen{height:100%;border-radius:30px;overflow:hidden;background:linear-gradient(180deg,#090a12,#090b17 58%,#05060d);padding:28px 16px 17px;position:relative}.screen:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 55% 28%,rgba(123,44,255,.11),transparent 24%),linear-gradient(145deg,transparent 0 50%,rgba(255,45,178,.05) 50.2% 50.5%,transparent 50.7%);pointer-events:none}.screen-top{display:flex;justify-content:space-between;color:#a7abba;font-size:7px;font-weight:800;letter-spacing:.22em;position:relative;z-index:2}.screen-top svg{width:12px;height:12px}.screen-logo{display:block;width:145px;height:auto;margin:22px auto 28px;position:relative;z-index:2}.screen-label{margin:0 0 10px;color:#9ca3b6;font-size:7px;font-weight:800;letter-spacing:.18em}.progress-card{display:flex;align-items:center;gap:13px}.progress-ring{width:84px;height:84px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--blue) 0 76%,#17192a 76%);position:relative;box-shadow:0 0 30px rgba(38,132,255,.2)}.progress-ring:after{content:"";position:absolute;inset:7px;background:#090b16;border-radius:50%}.progress-ring span{position:relative;z-index:2;font-size:27px;font-weight:900}.progress-ring small{font-size:11px}.progress-card>span{font-size:9px;color:#aeb4c4}.metric-list{margin-top:18px;display:grid;gap:8px}.metric-list>div{height:34px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.02);border-radius:8px;display:grid;grid-template-columns:8px 1fr auto;align-items:center;gap:8px;padding:0 9px;font-size:8px}.metric-list b{color:#cfd3df}.dot{width:6px;height:6px;border-radius:50%;background:currentColor;box-shadow:0 0 10px currentColor}.mock-nav{position:absolute;left:0;right:0;bottom:0;height:49px;border-top:1px solid rgba(255,255,255,.08);display:grid;grid-template-columns:repeat(4,1fr);place-items:center;font-size:7px;color:#8f95a8;background:#06070e}.mock-nav .active{color:var(--pink)}.training-screen{padding:73px 18px 18px;background:radial-gradient(circle at 60% 45%,rgba(38,132,255,.16),transparent 28%),linear-gradient(180deg,#070914,#090a12)}.training-title{margin:0;text-align:center;font-family:Impact,Haettenschweiler,sans-serif;font-size:27px;line-height:.9;transform:skew(-4deg);letter-spacing:.02em}.training-title strong{color:var(--pink)}.barbell-art{position:absolute;left:8%;right:8%;top:49%;height:150px;background:radial-gradient(circle at 50% 52%,#1b1f2d 0 10%,#080a11 11% 14%,#272c39 15% 17%,#06070b 18% 25%,transparent 26%),linear-gradient(170deg,transparent 43%,#404453 44% 47%,#13151e 48% 51%,transparent 52%);filter:drop-shadow(0 0 18px rgba(38,132,255,.32))}.barbell-art:before,.barbell-art:after{content:"";position:absolute;top:62%;width:63px;height:63px;border:10px solid #1c202c;border-radius:50%;box-shadow:0 0 0 2px #313648,0 0 25px rgba(38,132,255,.22)}.barbell-art:before{left:8%}.barbell-art:after{right:8%}.barbell-art span{position:absolute;left:17%;right:17%;top:74%;height:8px;background:linear-gradient(#444a5b,#11131a);transform:rotate(-5deg)}.training-foot{position:absolute;bottom:25px;left:0;right:0;text-align:center;color:#989eaf;font-size:8px;letter-spacing:.2em}.training-foot b{color:#fff}.hand-note{position:absolute;right:-1%;top:270px;color:#c9c6d4;font-family:"Segoe Print","Comic Sans MS",cursive;font-style:italic;font-size:23px;line-height:1.2;transform:rotate(-7deg);z-index:5;text-shadow:0 0 18px #000}.hand-note span{display:block;width:90px;height:3px;background:var(--pink);margin:8px 0 0 20px;transform:rotate(-9deg);box-shadow:0 0 12px var(--pink)}
+.access-shell{position:relative;margin-top:-1px}.access-strip{display:grid;grid-template-columns:1.1fr .95fr .95fr .82fr;align-items:stretch;border:1px solid rgba(80,103,169,.48);border-radius:16px;background:linear-gradient(100deg,rgba(7,13,30,.97),rgba(8,7,15,.98) 50%,rgba(34,6,32,.92));box-shadow:0 0 45px rgba(72,35,198,.12);overflow:hidden}.access-title,.mini-step,.access-action{min-height:112px;padding:24px 26px}.access-title{border-right:1px solid var(--line)}.access-title p{margin:0 0 8px;font-size:8px;letter-spacing:.24em;font-weight:800;color:#d1d4e0}.access-title h2{margin:0;font-size:26px;line-height:1.05}.access-title strong{color:var(--pink)}.mini-step{display:grid;grid-template-columns:42px 34px 1fr 24px;align-items:start;gap:12px;border-right:1px solid var(--line)}.mini-number{font-family:Impact,sans-serif;font-size:35px;line-height:1}.mini-icon{width:28px;height:28px;display:grid;place-items:center}.mini-icon svg{width:20px;height:20px}.mini-step h3{margin:0 0 5px;font-size:15px}.mini-step p{margin:0;color:#9ea4b6;font-size:9px;line-height:1.4}.mini-step>a{color:inherit}.mini-step>a svg{width:17px;height:17px}.access-action{display:flex;flex-direction:column;justify-content:center;gap:8px}.access-action .btn{min-height:46px;padding-inline:16px;gap:18px}.access-action small{font-size:7px;color:#8f95a7;text-align:center}.return-notice,.device-notice{margin-top:10px;border:1px solid var(--line);border-radius:10px;background:var(--panel);padding:10px 14px;align-items:center;gap:9px;font-size:11px;color:#bcc1cf}.return-notice:not([hidden]),.device-notice:not([hidden]){display:flex}.return-notice svg,.device-notice svg{width:16px;height:16px;color:var(--pink)}.return-notice a{text-decoration:underline}.return-notice button{margin-left:auto;border:0;background:transparent;color:#fff;font-size:20px;cursor:pointer}
+.benefits-section{display:grid;grid-template-columns:270px 1fr;gap:38px;padding:34px 0 26px;border-bottom:1px solid var(--line)}.benefit-intro h2{margin:13px 0 0;font-size:34px;line-height:.93;letter-spacing:-.03em}.benefit-intro strong{color:var(--pink)}.benefit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.benefit-card{min-height:132px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(180deg,rgba(12,13,24,.92),rgba(7,8,16,.92));padding:19px 18px}.benefit-icon{width:40px;height:40px;border:1px solid currentColor;border-radius:11px;display:grid;place-items:center;background:rgba(255,255,255,.015)}.benefit-icon svg{width:20px;height:20px}.benefit-card h3{margin:15px 0 5px;font-size:13px}.benefit-card p{margin:0;color:#979eaf;font-size:10px;line-height:1.4}
+.faq-section{display:grid;grid-template-columns:270px 1fr;gap:38px;padding:26px 0 22px;border-bottom:1px solid var(--line)}.faq-intro h2{margin:10px 0 6px;font-size:25px}.faq-intro>p:last-child{max-width:220px;color:#959cad;font-size:10px;line-height:1.45}.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 14px}.faq-grid details{border:1px solid var(--line);border-radius:8px;background:rgba(10,11,20,.72);padding:0 14px}.faq-grid summary{list-style:none;cursor:pointer;min-height:43px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:11px;font-weight:700}.faq-grid summary::-webkit-details-marker{display:none}.faq-grid summary svg{width:15px;height:15px;transition:transform .2s}.faq-grid details[open] summary svg{transform:rotate(45deg)}.faq-grid details p{margin:0;padding:0 30px 13px 0;color:#a4aabc;font-size:10px;line-height:1.5}
+.closing{min-height:92px;margin-top:16px;margin-bottom:12px;border:1px solid rgba(132,59,255,.35);border-radius:15px;background:linear-gradient(100deg,rgba(17,16,40,.98),rgba(15,5,26,.95) 48%,rgba(30,6,34,.94));display:grid;grid-template-columns:180px 1fr 255px 220px;align-items:center;overflow:hidden;position:relative}.closing:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent 25%,rgba(38,132,255,.08) 25.2% 25.5%,transparent 25.7% 72%,rgba(255,45,178,.08) 72.2% 72.5%,transparent 72.7%);pointer-events:none}.closing-art{position:relative;height:100%;overflow:hidden}.plate{position:absolute;width:100px;height:100px;border:12px solid #171a27;border-radius:50%;left:-18px;top:9px;box-shadow:0 0 0 2px #2d3447,0 0 26px rgba(38,132,255,.2)}.bar{position:absolute;width:190px;height:8px;background:linear-gradient(#3d4354,#0c0e14);left:30px;top:48px;transform:rotate(-4deg)}.closing-copy p{margin:0;color:var(--pink);font-size:8px;font-weight:900;letter-spacing:.22em}.closing-copy h2{margin:5px 0 0;font-size:29px}.closing .btn{width:245px;z-index:2}.closing-note{justify-self:center;color:#6aa5ff;font-family:"Segoe Print","Comic Sans MS",cursive;font-style:italic;font-size:15px;line-height:1.25;transform:rotate(-4deg);z-index:2}.closing-note span{display:block;width:60px;height:2px;background:var(--pink);margin-top:5px}
+.site-footer{min-height:66px;display:flex;align-items:center;justify-content:space-between;gap:28px}.footer-brand{display:flex;align-items:center;gap:18px}.footer-brand img{width:105px;height:auto}.footer-brand p{margin:0;font-size:9px}.footer-brand span{display:block;color:#8e95a7;font-size:8px;margin-top:4px}.footer-right{display:flex;align-items:center;gap:22px;color:#8f95a8;font-size:9px}.footer-right span{display:flex;align-items:center;gap:5px}.footer-right svg{width:14px;height:14px}.noscript{position:fixed;bottom:12px;left:12px;right:12px;padding:12px;background:#111;color:#fff;border:1px solid #555;border-radius:10px;z-index:50;font-size:12px}
+@media (max-width:1100px){.top-nav{gap:24px}.hero-grid{grid-template-columns:1fr .9fr}.hero-visual{transform:scale(.88);transform-origin:center right}.access-strip{grid-template-columns:1fr 1fr}.access-title,.mini-step,.access-action{min-height:100px}.access-title{border-bottom:1px solid var(--line)}.mini-step:nth-child(2){border-bottom:1px solid var(--line)}.access-action{grid-column:1/-1;min-height:auto;display:grid;grid-template-columns:1fr auto;align-items:center;padding-block:14px}.access-action small{grid-column:1/-1}.benefits-section,.faq-section{grid-template-columns:220px 1fr}.benefit-grid{grid-template-columns:repeat(2,1fr)}.closing{grid-template-columns:150px 1fr 220px}.closing-note{display:none}}
+@media (max-width:820px){.shell{width:min(100% - 32px,var(--shell))}.site-header{position:sticky;top:0}.header-grid{height:64px;grid-template-columns:150px 1fr}.brand{width:142px}.top-nav{display:none}.header-actions{justify-self:end}.android-tag{display:none}.access-chip{padding:9px 11px;font-size:8px}.access-chip svg{display:none}.hero-grid{min-height:auto;grid-template-columns:1fr;padding-bottom:0}.hero-copy{padding:38px 0 18px}.hero-copy h1{font-size:clamp(54px,16vw,72px)}.hero-lead{font-size:17px}.hero-text{font-size:14px;max-width:95%}.hero-ctas{gap:14px;align-items:stretch}.hero-ctas .btn-primary{width:auto;flex:1}.btn-link{min-width:150px}.hero-facts{gap:12px;display:grid;grid-template-columns:repeat(3,1fr)}.hero-facts>div{padding-right:10px}.fact-icon{width:34px;height:34px}.hero-facts p{font-size:8px}.hero-visual{height:430px;min-height:430px;transform:none;margin-top:0}.phone{width:210px;height:414px;border-radius:30px}.screen{border-radius:24px;padding:26px 13px 14px}.phone-main{left:12%;top:8px}.phone-back{right:3%;top:42px}.screen-logo{width:120px;margin:18px auto 20px}.progress-ring{width:68px;height:68px}.progress-ring span{font-size:22px}.metric-list>div{height:28px}.mock-nav{height:42px}.training-title{font-size:22px}.hand-note{right:1%;top:215px;font-size:18px}.access-shell{width:100%;margin:0}.access-strip{border-radius:0;border-left:0;border-right:0;grid-template-columns:1fr}.access-title,.mini-step,.access-action{border-right:0;border-bottom:1px solid var(--line);min-height:auto}.access-title{padding:20px 22px}.access-title h2{font-size:22px}.mini-step{padding:18px 22px;grid-template-columns:38px 30px 1fr 22px}.access-action{display:flex;padding:18px 22px}.access-action .btn{width:100%}.benefits-section,.faq-section{grid-template-columns:1fr;gap:18px;padding-top:28px}.benefit-intro h2{font-size:30px}.benefit-grid{grid-template-columns:1fr 1fr}.faq-grid{grid-template-columns:1fr}.closing{grid-template-columns:1fr;padding:25px 22px;min-height:auto}.closing-art,.closing-note{display:none}.closing-copy h2{font-size:25px}.closing .btn{width:100%;margin-top:16px}.site-footer{padding-block:18px;flex-direction:column;align-items:flex-start}.footer-right{width:100%;justify-content:space-between}}
+@media (max-width:520px){.shell{width:calc(100% - 28px)}.hero-copy{padding-top:30px}.kicker{font-size:7px;letter-spacing:.2em}.hero-copy h1{font-size:54px;line-height:.86;margin-top:15px}.hero-lead{font-size:15px}.hero-text{font-size:13px}.hero-ctas{display:grid;grid-template-columns:1fr}.hero-ctas .btn-primary{width:100%}.btn-link{width:max-content}.hero-facts{grid-template-columns:1fr 1fr;gap:14px 8px}.hero-facts>div:nth-child(2){border-right:0}.hero-facts>div:last-child{grid-column:1/-1}.hero-visual{height:350px;min-height:350px}.phone{width:170px;height:338px;border-radius:25px;padding:6px}.screen{border-radius:20px;padding:23px 11px 12px}.phone-notch{width:65px;height:17px;top:8px}.phone-main{left:6%;top:4px}.phone-back{right:0;top:29px}.screen-top{font-size:5px}.screen-logo{width:98px;margin:14px auto 16px}.screen-label{font-size:5px}.progress-ring{width:55px;height:55px}.progress-ring:after{inset:5px}.progress-ring span{font-size:17px}.progress-card>span{font-size:6px}.metric-list{margin-top:10px;gap:5px}.metric-list>div{height:23px;font-size:5.7px}.mock-nav{height:34px;font-size:5px}.training-title{font-size:17px}.barbell-art{top:48%;height:100px}.barbell-art:before,.barbell-art:after{width:44px;height:44px;border-width:7px}.training-foot{font-size:5.5px;bottom:17px}.hand-note{font-size:14px;top:177px}.mini-step{grid-template-columns:33px 26px 1fr 20px;gap:9px}.mini-number{font-size:30px}.mini-step h3{font-size:13px}.mini-step p{font-size:8px}.benefit-grid{grid-template-columns:1fr}.benefit-card{min-height:112px}.faq-intro>p:last-child{max-width:none}.footer-right{font-size:8px}}
+
+/* Flujo de acceso v2: dos acciones explícitas, sin CTA competidor. */
+.access-strip-v2{grid-template-columns:1.02fr 1fr 1fr;align-items:stretch}
+.access-strip-v2 .access-title,.access-strip-v2 .mini-step{min-height:166px;padding:22px 24px}
+.access-strip-v2 .access-title{display:flex;flex-direction:column;justify-content:center}
+.access-strip-v2 .access-title h2{font-size:25px;max-width:250px}
+.access-sequence{display:block;margin-top:12px;max-width:260px;color:#aeb4c4;font-size:9px;line-height:1.5}
+.access-sequence b{color:#fff}
+.access-strip-v2 .step-card{display:flex;flex-direction:column;gap:10px;justify-content:center;border-right:1px solid var(--line)}
+.access-strip-v2 .step-card:last-child{border-right:0}
+.step-top{display:grid;grid-template-columns:44px 30px 1fr;align-items:center;gap:10px}
+.step-top .mini-number{font-size:36px}
+.step-top .mini-icon{width:28px;height:28px}
+.step-heading small{display:block;margin-bottom:2px;color:#8d94a8;font-size:7px;font-weight:900;letter-spacing:.18em}
+.step-heading h3{margin:0;font-size:15px;line-height:1.1}
+.access-strip-v2 .step-card>p{margin:0;color:#a7adbd;font-size:9px;line-height:1.45;min-height:27px}
+.access-strip-v2 .step-card>a.step-cta{align-self:stretch!important;width:100%!important;height:56px!important;min-height:56px!important;max-width:none!important;border-radius:12px;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:16px;padding:0 22px!important;box-sizing:border-box;line-height:1;white-space:nowrap;font-size:14px!important;font-weight:950!important;letter-spacing:.01em!important;text-transform:uppercase;text-decoration:none!important;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease,background .18s ease}
+.access-strip-v2 .step-card>a.step-cta svg{width:20px!important;height:20px!important;flex:0 0 auto}
+.access-strip-v2 .step-card>a.step-cta span{display:block;flex:1 1 auto;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.access-strip-v2 .step-card>a.step-cta:hover{transform:translateY(-1px)}
+.step-cta-primary{background:linear-gradient(90deg,#ff22ab,#ff35bd);color:#03040a!important;border:1px solid #ff4ac4;box-shadow:0 9px 25px rgba(255,45,178,.18)}
+.step-cta-primary:hover{box-shadow:0 11px 30px rgba(255,45,178,.28)}
+.step-cta-secondary{background:linear-gradient(90deg,rgba(38,132,255,.12),rgba(123,44,255,.08));color:#f8f8fc!important;border:1px solid rgba(54,185,255,.78);box-shadow:inset 0 0 20px rgba(38,132,255,.04)}
+.step-cta-secondary:hover{border-color:#59c8ff;box-shadow:0 9px 26px rgba(38,132,255,.16),inset 0 0 22px rgba(38,132,255,.06)}
+
+.access-strip-v2 .step-card>a.step-cta:focus-visible{outline:3px solid rgba(255,255,255,.92);outline-offset:3px}
+.access-strip-v2 .step-card>a.step-cta-primary{background:linear-gradient(90deg,#ff20ae 0%,#ff35bd 100%);color:#050509!important;border:1px solid #ff4ac4;box-shadow:0 10px 28px rgba(255,45,178,.22)}
+.access-strip-v2 .step-card>a.step-cta-secondary{background:linear-gradient(90deg,rgba(25,113,255,.18),rgba(74,45,180,.16));color:#f8f8fc!important;border:1px solid #39a8ff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.02),0 8px 24px rgba(38,132,255,.08)}
+.step-meta{display:block;color:#747b8f;font-size:7px;line-height:1.35}
+.step-two.is-next{background:linear-gradient(180deg,rgba(38,132,255,.08),rgba(8,7,15,.98));box-shadow:inset 0 0 0 1px rgba(54,185,255,.23),0 0 30px rgba(38,132,255,.08)}
+.step-two.is-next .step-cta-secondary{background:linear-gradient(90deg,rgba(38,132,255,.22),rgba(123,44,255,.16));border-color:#5dcaff;box-shadow:0 0 28px rgba(38,132,255,.17)}
+.return-notice strong{color:#fff}
+.return-notice a{color:#67c9ff;font-weight:800}
+@media (max-width:1100px){
+  .access-strip-v2{grid-template-columns:1fr 1fr}
+  .access-strip-v2 .access-title{grid-column:1/-1;min-height:auto;padding:18px 24px;border-right:0;border-bottom:1px solid var(--line)}
+  .access-strip-v2 .access-title h2{max-width:none}
+  .access-sequence{max-width:none}
+  .access-strip-v2 .step-card{min-height:160px;border-bottom:0}
+  .access-strip-v2 .step-card:nth-child(2){border-bottom:0}
+}
+@media (max-width:820px){
+  .access-strip-v2{grid-template-columns:1fr}
+  .access-strip-v2 .access-title{grid-column:auto}
+  .access-strip-v2 .step-card{min-height:auto;padding:20px 22px;border-right:0;border-bottom:1px solid var(--line)}
+  .access-strip-v2 .step-card:last-child{border-bottom:0}
+  .access-strip-v2 .step-card>a.step-cta{height:54px!important;min-height:54px!important;font-size:13px!important}
+  .step-meta{font-size:8px}
+}
+@media (max-width:520px){
+  .access-strip-v2 .access-title h2{font-size:23px}
+  .access-sequence{font-size:9px}
+  .step-top{grid-template-columns:38px 28px 1fr;gap:9px}
+  .step-top .mini-number{font-size:31px}
+  .step-heading h3{font-size:14px}
+  .access-strip-v2 .step-card>p{font-size:9px}
+  .access-strip-v2 .step-card>a.step-cta{padding-inline:18px!important;font-size:12px!important}
+}
+
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+  <script>/* Configuración pública. No contiene secretos ni conexiones a otras apps.
+   No definir testingUrl hasta copiar y verificar el enlace de adhesión de Play Console.
+   Si se configura, el paso 2 abrirá primero la adhesión y conservará la ficha de Play como respaldo. */
+window.CENTER_CONFIG = Object.freeze({
+  groupUrl: 'https://groups.google.com/g/center-tester',
+  storeUrl: 'https://play.google.com/store/apps/details?id=com.complejocenter',
+  testingUrl: '',
+  proposedSiteUrl: 'https://center-testers.vercel.app',
+  published: true
+});
+</script>
+  <script>(() => {
+  'use strict';
+  const config = window.CENTER_CONFIG || {};
+  const storageKey = 'center.invitation.group-opened.v2';
+  const safe = (value, host, prefix) => {
+    try { const u = new URL(value); return u.protocol === 'https:' && u.hostname === host && u.pathname.startsWith(prefix) ? u.href : null; }
+    catch { return null; }
+  };
+  const groupUrl = safe(config.groupUrl, 'groups.google.com', '/g/');
+  const storeUrl = safe(config.storeUrl, 'play.google.com', '/store/apps/details');
+  const testingUrl = safe(config.testingUrl, 'play.google.com', '/apps/');
+  document.querySelectorAll('[data-group-link]').forEach(a => { if (groupUrl) a.href = groupUrl; });
+  document.querySelectorAll('[data-install-link]').forEach(a => { if (testingUrl || storeUrl) a.href = testingUrl || storeUrl; });
+
+  let groupOpened = false;
+  let dismissed = false;
+  try { groupOpened = sessionStorage.getItem(storageKey) === '1'; } catch {}
+  const notice = document.getElementById('return-notice');
+  const stepTwo = document.getElementById('paso-2');
+  const showNotice = () => {
+    if (groupOpened) stepTwo?.classList.add('is-next');
+    if (groupOpened && !dismissed && notice) notice.hidden = false;
+  };
+  document.querySelectorAll('[data-group-link]').forEach(a => a.addEventListener('click', () => {
+    groupOpened = true; dismissed = false;
+    try { sessionStorage.setItem(storageKey, '1'); } catch {}
+  }));
+  window.addEventListener('focus', showNotice);
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') showNotice(); });
+  document.getElementById('dismiss-return')?.addEventListener('click', () => { dismissed = true; notice.hidden = true; });
+  showNotice();
+
+  const ua = navigator.userAgent || '';
+  const ios = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  if (ios) document.getElementById('device-notice').hidden = false;
+})();
+</script>
+</head>
+<body>
+  <a class="skip-link" href="#acceso">Ir a los pasos para acceder</a>
+
+  <svg class="svg-defs" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 5l7 7-7 7"/></symbol>
+      <symbol id="i-external" viewBox="0 0 24 24"><path d="M7 17 18 6M7 6h11v11"/></symbol>
+      <symbol id="i-android" viewBox="0 0 24 24"><path d="m7 4 2 3m8-3-2 3M6 11a6 6 0 0 1 12 0v6H6zM3 12v4m18-4v4M9 17v3m6-3v3"/><path d="M10 10h.01M14 10h.01" stroke-width="2.5"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3 20v-1.5A4.5 4.5 0 0 1 7.5 14h3A4.5 4.5 0 0 1 15 18.5V20m1-6.5A4 4 0 0 1 21 17.4V20"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.3.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.5l6.3-.9z"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 3 7 3v5c0 4.6-3.2 7.4-7 9.3C8.2 18.4 5 15.6 5 11V6z"/><path d="m9 12 2 2 4-5"/></symbol>
+      <symbol id="i-weight" viewBox="0 0 24 24"><path d="M6 8v8M3 10v4m15-6v8m3-6v4M6 12h12"/></symbol>
+      <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 19V5m0 14h16M8 15l4-5 4 2 4-6"/></symbol>
+      <symbol id="i-flame" viewBox="0 0 24 24"><path d="M13 3c1 4 5 5 5 10a6 6 0 1 1-12 0c0-2.8 1.6-4.7 3.2-6.4-.1 2.7 1.8 4 1.8 4 1.8-1.8 2.6-4.6 2-7.6Z"/></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><path d="m7 4 12 8-12 8z"/></symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+      <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header" id="inicio">
+    <div class="shell header-grid">
+      <a class="brand" href="#inicio" aria-label="Complejo Center, volver al inicio">
+        <img src="assets/center-logo.png" alt="Complejo Center" width="956" height="255" fetchpriority="high">
+      </a>
+      <nav class="top-nav" aria-label="Navegación principal">
+        <a href="#invitacion">La invitación</a>
+        <a href="#acceso">Cómo entrar</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#preguntas">Preguntas</a>
+      </nav>
+      <div class="header-actions">
+        <span class="android-tag"><svg><use href="#i-android"/></svg>Android</span>
+        <a class="access-chip" href="#acceso"><span></span>ACCESO ANTICIPADO<svg><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="invitacion">
+      <div class="hero-glow hero-glow-blue"></div>
+      <div class="hero-glow hero-glow-pink"></div>
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="kicker"><span></span>ENTRENÁ. PROGRESÁ. FORMÁ PARTE.</p>
+          <h1><span>FUISTE</span><strong>INVITADO.</strong></h1>
+          <p class="hero-lead">La nueva app de Complejo Center.</p>
+          <p class="hero-text">Entrená, seguí tu progreso y sumate a una comunidad de <strong>100 testers.</strong> <b>Antes de su lanzamiento.</b></p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="#acceso">QUIERO PROBAR CENTER<svg><use href="#i-arrow"/></svg></a>
+            <a class="btn-link" href="#beneficios"><span class="play-circle"><svg><use href="#i-play"/></svg></span><span><b>Ver qué incluye</b><small>Conocé la experiencia</small></span></a>
+          </div>
+          <div class="hero-facts">
+            <div><span class="fact-icon pink"><svg><use href="#i-users"/></svg></span><p>Convocatoria limitada<br><b>100 testers</b></p></div>
+            <div><span class="fact-icon violet"><svg><use href="#i-star"/></svg></span><p>Acceso anticipado<br><b>en esta etapa</b></p></div>
+            <div><span class="fact-icon blue"><svg><use href="#i-shield"/></svg></span><p>Acceso mediante<br><b>tu cuenta de Google</b></p></div>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Vista conceptual de Center en teléfonos Android">
+          <div class="beam beam-blue"></div>
+          <div class="beam beam-pink"></div>
+          <div class="phone phone-main">
+            <div class="phone-notch"></div>
+            <div class="screen">
+              <div class="screen-top"><span>PRIMERA COMUNIDAD</span><svg><use href="#i-android"/></svg></div>
+              <img src="assets/center-logo.png" alt="" class="screen-logo">
+              <p class="screen-label">TU PROGRESO</p>
+              <div class="progress-card">
+                <div class="progress-ring"><span>76<small>%</small></span></div>
+                <span>Esta semana</span>
+              </div>
+              <div class="metric-list">
+                <div><i class="dot pink"></i><span>Entrenamientos</span><b>4/5</b></div>
+                <div><i class="dot blue"></i><span>Hidratación</span><b>6/8</b></div>
+                <div><i class="dot violet"></i><span>Nutrición</span><b>3/5</b></div>
+              </div>
+              <div class="mock-nav"><span class="active">Inicio</span><span>Rutinas</span><span>Progreso</span><span>Más</span></div>
+            </div>
+          </div>
+          <div class="phone phone-back">
+            <div class="phone-notch"></div>
+            <div class="screen training-screen">
+              <p class="training-title">DISCIPLINA<br>TAMBIÉN<br><strong>CONECTA.</strong></p>
+              <div class="barbell-art"><span></span></div>
+              <p class="training-foot">MÁS QUE UNA APP.<br><b>UNA COMUNIDAD.</b></p>
+            </div>
+          </div>
+          <p class="hand-note">Gente real.<br>Resultados reales.<span></span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="access-shell shell" id="acceso" aria-labelledby="access-title">
+      <div class="access-strip access-strip-v2">
+        <div class="access-title">
+          <p>TU INVITACIÓN EMPIEZA ACÁ</p>
+          <h2 id="access-title">En <strong>2 pasos,</strong> ya sos parte.</h2>
+          <span class="access-sequence">Primero completá el <b>Paso 1</b>. Después volvé y hacé el <b>Paso 2</b>.</span>
+        </div>
+
+        <div class="mini-step step-card step-one" id="paso-1">
+          <div class="step-top">
+            <span class="mini-number pink">01</span>
+            <span class="mini-icon pink"><svg><use href="#i-users"/></svg></span>
+            <div class="step-heading"><small>PASO 1</small><h3>Sumate al grupo</h3></div>
+          </div>
+          <p>Unite al grupo de testers con la misma cuenta de Google que usás en Play Store.</p>
+          <a class="step-cta step-cta-primary" data-group-link href="https://groups.google.com/g/center-tester" target="_blank" rel="noopener noreferrer" aria-label="Paso 1: unirme al grupo de testers"><span>PASO 1 · ABRIR GRUPO</span><svg><use href="#i-arrow"/></svg></a>
+          <small class="step-meta">Abrí el grupo y después volvé acá para hacer el Paso 2.</small>
+        </div>
+
+        <div class="mini-step step-card step-two" id="paso-2">
+          <div class="step-top">
+            <span class="mini-number blue">02</span>
+            <span class="mini-icon blue"><svg><use href="#i-play"/></svg></span>
+            <div class="step-heading"><small>PASO 2</small><h3>Descargá Center</h3></div>
+          </div>
+          <p>Cuando ya estés dentro del grupo, volvé acá y abrí Google Play con esa misma cuenta.</p>
+          <a class="step-cta step-cta-secondary" data-install-link href="https://play.google.com/store/apps/details?id=com.complejocenter" target="_blank" rel="noopener noreferrer" aria-label="Paso 2: descargar Center desde Google Play"><span>PASO 2 · IR A GOOGLE PLAY</span><svg><use href="#i-arrow"/></svg></a>
+          <small class="step-meta">Hacelo después de entrar al grupo con la misma cuenta.</small>
+        </div>
+      </div>
+      <div class="return-notice" id="return-notice" hidden><svg><use href="#i-check"/></svg><span><strong>Paso 1 abierto.</strong> Ahora continuá con <a href="#paso-2">Paso 2 · Descargar Center.</a></span><button id="dismiss-return" type="button" aria-label="Cerrar">×</button></div>
+      <div class="device-notice" id="device-notice" hidden><svg><use href="#i-android"/></svg><span>Esta convocatoria es para Android.</span></div>
+    </section>
+
+    <section class="benefits-section shell" id="beneficios">
+      <div class="benefit-intro">
+        <p class="section-kicker">MÁS QUE UNA APP</p>
+        <h2>Tu rutina.<br>Tu progreso.<br><strong>Tu Center.</strong></h2>
+      </div>
+      <div class="benefit-grid">
+        <article class="benefit-card"><span class="benefit-icon pink"><svg><use href="#i-weight"/></svg></span><h3>Entrená con un objetivo</h3><p>Rutinas y ejercicios pensados para vos.</p></article>
+        <article class="benefit-card"><span class="benefit-icon blue"><svg><use href="#i-chart"/></svg></span><h3>Hacé visible tu progreso</h3><p>Seguí tu evolución, un día a la vez.</p></article>
+        <article class="benefit-card"><span class="benefit-icon violet"><svg><use href="#i-flame"/></svg></span><h3>Sumá mejores hábitos</h3><p>Nutrición e hidratación en tu día a día.</p></article>
+        <article class="benefit-card"><span class="benefit-icon pink"><svg><use href="#i-users"/></svg></span><h3>Una comunidad real</h3><p>Motivación, desafíos y gente como vos.</p></article>
+      </div>
+    </section>
+
+    <section class="faq-section shell" id="preguntas">
+      <div class="faq-intro">
+        <p class="section-kicker">SIN VUELTAS</p>
+        <h2>Lo que necesitás saber.</h2>
+        <p>Lo esencial para que la invitación termine con Center en tu teléfono.</p>
+      </div>
+      <div class="faq-grid">
+        <details id="ayuda-google"><summary>No veo la app o no puedo instalarla.<svg><use href="#i-plus"/></svg></summary><p>Primero comprobá que ya ingresaste al grupo de testers. Después abrí Google Play usando la misma cuenta de Google.</p></details>
+        <details><summary>¿Qué significa ser tester?<svg><use href="#i-plus"/></svg></summary><p>Vas a usar una versión previa al lanzamiento. Algunas funciones pueden cambiar y podrías encontrar errores durante la prueba.</p></details>
+        <details><summary>¿Puedo probarla con un iPhone?<svg><use href="#i-plus"/></svg></summary><p>Esta convocatoria corresponde a la versión Android.</p></details>
+        <details><summary>¿Qué cuenta de Google uso?<svg><use href="#i-plus"/></svg></summary><p>La misma cuenta con la que te unís al grupo debe ser la que uses en Google Play.</p></details>
+      </div>
+    </section>
+
+    <section class="closing shell">
+      <div class="closing-art" aria-hidden="true"><div class="plate"></div><div class="bar"></div></div>
+      <div class="closing-copy"><p>EL PRÓXIMO CAPÍTULO EMPIEZA CON VOS</p><h2>Vivilo desde el principio.</h2></div>
+      <a class="btn btn-primary" data-group-link href="https://groups.google.com/g/center-tester" target="_blank" rel="noopener noreferrer">QUIERO SER PARTE<svg><use href="#i-arrow"/></svg></a>
+      <p class="closing-note">Tu rutina hoy.<br>Tu mejor versión mañana.<span></span></p>
+    </section>
+  </main>
+
+  <footer class="site-footer shell">
+    <div class="footer-brand"><img src="assets/center-logo.png" alt="Complejo Center"><p><b>Complejo Center</b><span>Acceso anticipado · Versión de prueba para Android.</span></p></div>
+    <div class="footer-right"><a href="#preguntas">Preguntas</a><a href="#acceso">Cómo entrar</a><span><svg><use href="#i-android"/></svg>Android</span></div>
+  </footer>
+
+  <noscript><div class="noscript">Podés usar los botones igualmente. Primero unite al grupo y después abrí Google Play con la misma cuenta.</div></noscript>
+</body>
+</html>
