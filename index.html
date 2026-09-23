@@ -35,7 +35,7 @@
 @media (max-width:520px){.shell{width:calc(100% - 28px)}.hero-copy{padding-top:30px}.kicker{font-size:7px;letter-spacing:.2em}.hero-copy h1{font-size:54px;line-height:.86;margin-top:15px}.hero-lead{font-size:15px}.hero-text{font-size:13px}.hero-ctas{display:grid;grid-template-columns:1fr}.hero-ctas .btn-primary{width:100%}.btn-link{width:max-content}.hero-facts{grid-template-columns:1fr 1fr;gap:14px 8px}.hero-facts>div:nth-child(2){border-right:0}.hero-facts>div:last-child{grid-column:1/-1}.hero-visual{height:350px;min-height:350px}.phone{width:170px;height:338px;border-radius:25px;padding:6px}.screen{border-radius:20px;padding:23px 11px 12px}.phone-notch{width:65px;height:17px;top:8px}.phone-main{left:6%;top:4px}.phone-back{right:0;top:29px}.screen-top{font-size:5px}.screen-logo{width:98px;margin:14px auto 16px}.screen-label{font-size:5px}.progress-ring{width:55px;height:55px}.progress-ring:after{inset:5px}.progress-ring span{font-size:17px}.progress-card>span{font-size:6px}.metric-list{margin-top:10px;gap:5px}.metric-list>div{height:23px;font-size:5.7px}.mock-nav{height:34px;font-size:5px}.training-title{font-size:17px}.barbell-art{top:48%;height:100px}.barbell-art:before,.barbell-art:after{width:44px;height:44px;border-width:7px}.training-foot{font-size:5.5px;bottom:17px}.hand-note{font-size:14px;top:177px}.mini-step{grid-template-columns:33px 26px 1fr 20px;gap:9px}.mini-number{font-size:30px}.mini-step h3{font-size:13px}.mini-step p{font-size:8px}.benefit-grid{grid-template-columns:1fr}.benefit-card{min-height:112px}.faq-intro>p:last-child{max-width:none}.footer-right{font-size:8px}}
 
 /* Flujo de acceso v2: dos acciones explícitas, sin CTA competidor. */
-.access-strip-v2{grid-template-columns:1.02fr 1fr 1fr;align-items:stretch}
+.access-strip-v2{grid-template-columns:.88fr 1fr 1fr 1fr;align-items:stretch}
 .access-strip-v2 .access-title,.access-strip-v2 .mini-step{min-height:166px;padding:22px 24px}
 .access-strip-v2 .access-title{display:flex;flex-direction:column;justify-content:center}
 .access-strip-v2 .access-title h2{font-size:25px;max-width:250px}
@@ -57,6 +57,9 @@
 .step-cta-primary:hover{box-shadow:0 11px 30px rgba(255,45,178,.28)}
 .step-cta-secondary{background:linear-gradient(90deg,rgba(38,132,255,.12),rgba(123,44,255,.08));color:#f8f8fc!important;border:1px solid rgba(54,185,255,.78);box-shadow:inset 0 0 20px rgba(38,132,255,.04)}
 .step-cta-secondary:hover{border-color:#59c8ff;box-shadow:0 9px 26px rgba(38,132,255,.16),inset 0 0 22px rgba(38,132,255,.06)}
+.step-cta-install{background:linear-gradient(90deg,#2684ff 0%,#7b2cff 48%,#ff2db2 100%);color:#fff!important;border:1px solid rgba(255,255,255,.22);box-shadow:0 10px 30px rgba(123,44,255,.20)}
+.step-cta-install:hover{box-shadow:0 12px 34px rgba(255,45,178,.24),0 8px 28px rgba(38,132,255,.16)}
+.step-three.is-next{background:linear-gradient(180deg,rgba(123,44,255,.10),rgba(8,7,15,.98));box-shadow:inset 0 0 0 1px rgba(255,45,178,.22),0 0 32px rgba(123,44,255,.10)}
 
 .access-strip-v2 .step-card>a.step-cta:focus-visible{outline:3px solid rgba(255,255,255,.92);outline-offset:3px}
 .access-strip-v2 .step-card>a.step-cta-primary{background:linear-gradient(90deg,#ff20ae 0%,#ff35bd 100%);color:#050509!important;border:1px solid #ff4ac4;box-shadow:0 10px 28px rgba(255,45,178,.22)}
@@ -67,7 +70,7 @@
 .return-notice strong{color:#fff}
 .return-notice a{color:#67c9ff;font-weight:800}
 @media (max-width:1100px){
-  .access-strip-v2{grid-template-columns:1fr 1fr}
+  .access-strip-v2{grid-template-columns:repeat(3,1fr)}
   .access-strip-v2 .access-title{grid-column:1/-1;min-height:auto;padding:18px 24px;border-right:0;border-bottom:1px solid var(--line)}
   .access-strip-v2 .access-title h2{max-width:none}
   .access-sequence{max-width:none}
@@ -95,10 +98,11 @@
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 </style>
   <script>/* Configuración pública. No contiene secretos ni conexiones a otras apps.
-   El Paso 2 usa la ficha de Google Play verificada por usuarios reales. */
+   Flujo: grupo -> aceptar prueba -> instalar desde Google Play. */
 window.CENTER_CONFIG = Object.freeze({
   groupUrl: 'https://groups.google.com/g/center-tester',
-  storeUrl: 'https://play.google.com/apps/testing/com.complejocenter',
+  optInUrl: 'https://play.google.com/apps/testing/com.complejocenter',
+  storeUrl: 'https://play.google.com/store/apps/details?id=com.complejocenter',
   proposedSiteUrl: 'https://center-testers.vercel.app',
   published: true
 });
@@ -106,28 +110,52 @@ window.CENTER_CONFIG = Object.freeze({
   <script>(() => {
   'use strict';
   const config = window.CENTER_CONFIG || {};
-  const storageKey = 'center.invitation.group-opened.v2';
+  const storageKey = 'center.invitation.group-opened.v3';
+  const optInStorageKey = 'center.invitation.optin-opened.v1';
   const safe = (value, host, prefix) => {
     try { const u = new URL(value); return u.protocol === 'https:' && u.hostname === host && u.pathname.startsWith(prefix) ? u.href : null; }
     catch { return null; }
   };
   const groupUrl = safe(config.groupUrl, 'groups.google.com', '/g/');
-  const storeUrl = safe(config.storeUrl, 'play.google.com', '/apps/testing/');
+  const optInUrl = safe(config.optInUrl, 'play.google.com', '/apps/testing/');
+  const storeUrl = safe(config.storeUrl, 'play.google.com', '/store/apps/details');
   document.querySelectorAll('[data-group-link]').forEach(a => { if (groupUrl) a.href = groupUrl; });
+  document.querySelectorAll('[data-optin-link]').forEach(a => { if (optInUrl) a.href = optInUrl; });
   document.querySelectorAll('[data-install-link]').forEach(a => { if (storeUrl) a.href = storeUrl; });
 
   let groupOpened = false;
+  let optInOpened = false;
   let dismissed = false;
-  try { groupOpened = sessionStorage.getItem(storageKey) === '1'; } catch {}
+  try {
+    groupOpened = sessionStorage.getItem(storageKey) === '1';
+    optInOpened = sessionStorage.getItem(optInStorageKey) === '1';
+  } catch {}
   const notice = document.getElementById('return-notice');
+  const noticeText = document.getElementById('return-notice-text');
   const stepTwo = document.getElementById('paso-2');
+  const stepThree = document.getElementById('paso-3');
   const showNotice = () => {
-    if (groupOpened) stepTwo?.classList.add('is-next');
-    if (groupOpened && !dismissed && notice) notice.hidden = false;
+    if (groupOpened && !optInOpened) stepTwo?.classList.add('is-next');
+    if (optInOpened) {
+      stepTwo?.classList.remove('is-next');
+      stepThree?.classList.add('is-next');
+    }
+    if (groupOpened && !dismissed && notice) {
+      notice.hidden = false;
+      if (noticeText) {
+        noticeText.innerHTML = optInOpened
+          ? '<strong>Paso 2 abierto.</strong> Si ya aceptaste ser tester, continuá con <a href="#paso-3">Paso 3 · Instalar Center.</a>'
+          : '<strong>Paso 1 abierto.</strong> Ahora continuá con <a href="#paso-2">Paso 2 · Activar la prueba.</a>';
+      }
+    }
   };
   document.querySelectorAll('[data-group-link]').forEach(a => a.addEventListener('click', () => {
     groupOpened = true; dismissed = false;
     try { sessionStorage.setItem(storageKey, '1'); } catch {}
+  }));
+  document.querySelectorAll('[data-optin-link]').forEach(a => a.addEventListener('click', () => {
+    optInOpened = true; dismissed = false;
+    try { sessionStorage.setItem(optInStorageKey, '1'); } catch {}
   }));
   window.addEventListener('focus', showNotice);
   document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') showNotice(); });
@@ -238,8 +266,8 @@ window.CENTER_CONFIG = Object.freeze({
       <div class="access-strip access-strip-v2">
         <div class="access-title">
           <p>TU INVITACIÓN EMPIEZA ACÁ</p>
-          <h2 id="access-title">En <strong>2 pasos,</strong> ya sos parte.</h2>
-          <span class="access-sequence">Primero completá el <b>Paso 1</b>. Después volvé y hacé el <b>Paso 2</b>.</span>
+          <h2 id="access-title">En <strong>3 pasos,</strong> ya sos parte.</h2>
+          <span class="access-sequence"><b>1.</b> Sumate al grupo. <b>2.</b> Activá la prueba. <b>3.</b> Instalá Center.</span>
         </div>
 
         <div class="mini-step step-card step-one" id="paso-1">
@@ -248,23 +276,34 @@ window.CENTER_CONFIG = Object.freeze({
             <span class="mini-icon pink"><svg><use href="#i-users"/></svg></span>
             <div class="step-heading"><small>PASO 1</small><h3>Sumate al grupo</h3></div>
           </div>
-          <p>Unite al grupo de testers con la misma cuenta de Google que usás en Play Store.</p>
+          <p>Entrá al grupo de testers con la misma cuenta de Google que usás en Play Store.</p>
           <a class="step-cta step-cta-primary" data-group-link href="https://groups.google.com/g/center-tester" target="_blank" rel="noopener noreferrer" aria-label="Paso 1: unirme al grupo de testers"><span>PASO 1 · ABRIR GRUPO</span><svg><use href="#i-arrow"/></svg></a>
-          <small class="step-meta">Abrí el grupo y después volvé acá para hacer el Paso 2.</small>
+          <small class="step-meta">Después volvé a esta página y seguí con el Paso 2.</small>
         </div>
 
         <div class="mini-step step-card step-two" id="paso-2">
           <div class="step-top">
             <span class="mini-number blue">02</span>
-            <span class="mini-icon blue"><svg><use href="#i-play"/></svg></span>
+            <span class="mini-icon blue"><svg><use href="#i-star"/></svg></span>
             <div class="step-heading"><small>PASO 2</small><h3>Activá la prueba</h3></div>
           </div>
-          <p>Cuando ya estés dentro del grupo, volvé acá, aceptá participar en la prueba y continuá a Google Play con esa misma cuenta.</p>
-          <a class="step-cta step-cta-secondary" data-install-link href="https://play.google.com/apps/testing/com.complejocenter" target="_blank" rel="noopener noreferrer" aria-label="Paso 2: activar la prueba e instalar Center"><span>PASO 2 · ACTIVAR E INSTALAR</span><svg><use href="#i-arrow"/></svg></a>
-          <small class="step-meta">Aceptá la prueba y seguí el enlace de Google Play.</small>
+          <p>Aceptá participar como tester de Center usando esa misma cuenta de Google.</p>
+          <a class="step-cta step-cta-secondary" data-optin-link href="https://play.google.com/apps/testing/com.complejocenter" target="_blank" rel="noopener noreferrer" aria-label="Paso 2: aceptar participar en la prueba de Center"><span>PASO 2 · ACTIVAR PRUEBA</span><svg><use href="#i-arrow"/></svg></a>
+          <small class="step-meta">Cuando Google confirme que sos tester, volvé y hacé el Paso 3.</small>
+        </div>
+
+        <div class="mini-step step-card step-three" id="paso-3">
+          <div class="step-top">
+            <span class="mini-number violet">03</span>
+            <span class="mini-icon violet"><svg><use href="#i-play"/></svg></span>
+            <div class="step-heading"><small>PASO 3</small><h3>Instalá Center</h3></div>
+          </div>
+          <p>¿Ya sos tester? Entrá directamente a Google Play e instalá la app en tu Android.</p>
+          <a class="step-cta step-cta-install" data-install-link href="https://play.google.com/store/apps/details?id=com.complejocenter" target="_blank" rel="noopener noreferrer" aria-label="Paso 3: instalar Center desde Google Play"><span>PASO 3 · INSTALAR CENTER</span><svg><use href="#i-arrow"/></svg></a>
+          <small class="step-meta">Este es el último paso. Si ya sos tester, podés entrar directo acá.</small>
         </div>
       </div>
-      <div class="return-notice" id="return-notice" hidden><svg><use href="#i-check"/></svg><span><strong>Paso 1 abierto.</strong> Ahora continuá con <a href="#paso-2">Paso 2 · Activar e instalar Center.</a></span><button id="dismiss-return" type="button" aria-label="Cerrar">×</button></div>
+      <div class="return-notice" id="return-notice" hidden><svg><use href="#i-check"/></svg><span id="return-notice-text"></span><button id="dismiss-return" type="button" aria-label="Cerrar">×</button></div>
       <div class="device-notice" id="device-notice" hidden><svg><use href="#i-android"/></svg><span>Esta convocatoria es para Android.</span></div>
     </section>
 
@@ -288,7 +327,7 @@ window.CENTER_CONFIG = Object.freeze({
         <p>Lo esencial para que la invitación termine con Center en tu teléfono.</p>
       </div>
       <div class="faq-grid">
-        <details id="ayuda-google"><summary>No veo la app o no puedo instalarla.<svg><use href="#i-plus"/></svg></summary><p>Primero comprobá que ya ingresaste al grupo de testers. Después abrí Google Play usando la misma cuenta de Google.</p></details>
+        <details id="ayuda-google"><summary>No veo la app o no puedo instalarla.<svg><use href="#i-plus"/></svg></summary><p>Completá los 3 pasos con la misma cuenta de Google: grupo, activar la prueba y luego instalar Center desde Google Play.</p></details>
         <details><summary>¿Qué significa ser tester?<svg><use href="#i-plus"/></svg></summary><p>Vas a usar una versión previa al lanzamiento. Algunas funciones pueden cambiar y podrías encontrar errores durante la prueba.</p></details>
         <details><summary>¿Puedo probarla con un iPhone?<svg><use href="#i-plus"/></svg></summary><p>Esta convocatoria corresponde a la versión Android.</p></details>
         <details><summary>¿Qué cuenta de Google uso?<svg><use href="#i-plus"/></svg></summary><p>La misma cuenta con la que te unís al grupo debe ser la que uses en Google Play.</p></details>
@@ -308,6 +347,6 @@ window.CENTER_CONFIG = Object.freeze({
     <div class="footer-right"><a href="#preguntas">Preguntas</a><a href="#acceso">Cómo entrar</a><span><svg><use href="#i-android"/></svg>Android</span></div>
   </footer>
 
-  <noscript><div class="noscript">Podés usar los botones igualmente. Primero unite al grupo y después abrí Google Play con la misma cuenta.</div></noscript>
+  <noscript><div class="noscript">Completá los 3 pasos con la misma cuenta de Google: grupo, activar la prueba y después instalar Center desde Google Play.</div></noscript>
 </body>
 </html>
