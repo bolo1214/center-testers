@@ -98,7 +98,7 @@
    El Paso 2 usa la ficha de Google Play verificada por usuarios reales. */
 window.CENTER_CONFIG = Object.freeze({
   groupUrl: 'https://groups.google.com/g/center-tester',
-  storeUrl: 'https://play.google.com/store/apps/details?id=com.complejocenter',
+  storeUrl: 'https://play.google.com/apps/testing/com.complejocenter',
   proposedSiteUrl: 'https://center-testers.vercel.app',
   published: true
 });
@@ -112,7 +112,7 @@ window.CENTER_CONFIG = Object.freeze({
     catch { return null; }
   };
   const groupUrl = safe(config.groupUrl, 'groups.google.com', '/g/');
-  const storeUrl = safe(config.storeUrl, 'play.google.com', '/store/apps/details');
+  const storeUrl = safe(config.storeUrl, 'play.google.com', '/apps/testing/');
   document.querySelectorAll('[data-group-link]').forEach(a => { if (groupUrl) a.href = groupUrl; });
   document.querySelectorAll('[data-install-link]').forEach(a => { if (storeUrl) a.href = storeUrl; });
 
@@ -257,14 +257,14 @@ window.CENTER_CONFIG = Object.freeze({
           <div class="step-top">
             <span class="mini-number blue">02</span>
             <span class="mini-icon blue"><svg><use href="#i-play"/></svg></span>
-            <div class="step-heading"><small>PASO 2</small><h3>Descargá Center</h3></div>
+            <div class="step-heading"><small>PASO 2</small><h3>Activá la prueba</h3></div>
           </div>
-          <p>Cuando ya estés dentro del grupo, volvé acá y abrí Google Play con esa misma cuenta.</p>
-          <a class="step-cta step-cta-secondary" data-install-link href="https://play.google.com/store/apps/details?id=com.complejocenter" target="_blank" rel="noopener noreferrer" aria-label="Paso 2: descargar Center desde Google Play"><span>PASO 2 · IR A GOOGLE PLAY</span><svg><use href="#i-arrow"/></svg></a>
-          <small class="step-meta">Hacelo después de entrar al grupo con la misma cuenta.</small>
+          <p>Cuando ya estés dentro del grupo, volvé acá, aceptá participar en la prueba y continuá a Google Play con esa misma cuenta.</p>
+          <a class="step-cta step-cta-secondary" data-install-link href="https://play.google.com/apps/testing/com.complejocenter" target="_blank" rel="noopener noreferrer" aria-label="Paso 2: activar la prueba e instalar Center"><span>PASO 2 · ACTIVAR E INSTALAR</span><svg><use href="#i-arrow"/></svg></a>
+          <small class="step-meta">Aceptá la prueba y seguí el enlace de Google Play.</small>
         </div>
       </div>
-      <div class="return-notice" id="return-notice" hidden><svg><use href="#i-check"/></svg><span><strong>Paso 1 abierto.</strong> Ahora continuá con <a href="#paso-2">Paso 2 · Descargar Center.</a></span><button id="dismiss-return" type="button" aria-label="Cerrar">×</button></div>
+      <div class="return-notice" id="return-notice" hidden><svg><use href="#i-check"/></svg><span><strong>Paso 1 abierto.</strong> Ahora continuá con <a href="#paso-2">Paso 2 · Activar e instalar Center.</a></span><button id="dismiss-return" type="button" aria-label="Cerrar">×</button></div>
       <div class="device-notice" id="device-notice" hidden><svg><use href="#i-android"/></svg><span>Esta convocatoria es para Android.</span></div>
     </section>
 
