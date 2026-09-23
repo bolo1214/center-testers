@@ -95,12 +95,10 @@
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 </style>
   <script>/* Configuración pública. No contiene secretos ni conexiones a otras apps.
-   No definir testingUrl hasta copiar y verificar el enlace de adhesión de Play Console.
-   Si se configura, el paso 2 abrirá primero la adhesión y conservará la ficha de Play como respaldo. */
+   El Paso 2 usa la ficha de Google Play verificada por usuarios reales. */
 window.CENTER_CONFIG = Object.freeze({
   groupUrl: 'https://groups.google.com/g/center-tester',
   storeUrl: 'https://play.google.com/store/apps/details?id=com.complejocenter',
-  testingUrl: '',
   proposedSiteUrl: 'https://center-testers.vercel.app',
   published: true
 });
@@ -115,9 +113,8 @@ window.CENTER_CONFIG = Object.freeze({
   };
   const groupUrl = safe(config.groupUrl, 'groups.google.com', '/g/');
   const storeUrl = safe(config.storeUrl, 'play.google.com', '/store/apps/details');
-  const testingUrl = safe(config.testingUrl, 'play.google.com', '/apps/');
   document.querySelectorAll('[data-group-link]').forEach(a => { if (groupUrl) a.href = groupUrl; });
-  document.querySelectorAll('[data-install-link]').forEach(a => { if (testingUrl || storeUrl) a.href = testingUrl || storeUrl; });
+  document.querySelectorAll('[data-install-link]').forEach(a => { if (storeUrl) a.href = storeUrl; });
 
   let groupOpened = false;
   let dismissed = false;
