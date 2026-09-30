@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "mode": "no-actions-until-self-hosted-runner",
+  "actionsAllowed": false,
+  "futureRunnerLabel": "center-testers",
+  "hostedExceptions": []
+}
